@@ -120,35 +120,35 @@ class Marquee extends StatefulWidget {
     Curve decelerationCurve = Curves.decelerate,
     this.onDone,
   })  : assert(!blankSpace.isNaN),
-        assert(blankSpace >= 0, "The blankSpace needs to be positive or zero."),
+        assert(blankSpace >= 0, 'The blankSpace needs to be positive or zero.'),
         assert(blankSpace.isFinite),
         assert(!velocity.isNaN),
-        assert(velocity != 0.0, "The velocity cannot be zero."),
+        assert(velocity != 0.0, 'The velocity cannot be zero.'),
         assert(velocity.isFinite),
         assert(
           pauseAfterRound >= Duration.zero,
           "The pauseAfterRound cannot be negative as time travel isn't "
-          "invented yet.",
+          'invented yet.',
         ),
         assert(
           fadingEdgeStartFraction >= 0 && fadingEdgeStartFraction <= 1,
-          "The fadingEdgeGradientFractionOnStart value should be between 0 and "
-          "1, inclusive",
+          'The fadingEdgeGradientFractionOnStart value should be between 0 and '
+          '1, inclusive',
         ),
         assert(
           fadingEdgeEndFraction >= 0 && fadingEdgeEndFraction <= 1,
-          "The fadingEdgeGradientFractionOnEnd value should be between 0 and "
-          "1, inclusive",
+          'The fadingEdgeGradientFractionOnEnd value should be between 0 and '
+          '1, inclusive',
         ),
         assert(numberOfRounds == null || numberOfRounds > 0),
         assert(
           accelerationDuration >= Duration.zero,
           "The accelerationDuration cannot be negative as time travel isn't "
-          "invented yet.",
+          'invented yet.',
         ),
         assert(
           decelerationDuration >= Duration.zero,
-          "The decelerationDuration must be positive or zero as time travel "
+          'The decelerationDuration must be positive or zero as time travel '
           "isn't invented yet.",
         ),
         this.accelerationCurve = _IntegralCurve(accelerationCurve),
@@ -612,16 +612,16 @@ class _MarqueeState extends State<Marquee> with SingleTickerProviderStateMixin {
 
     assert(
       _totalDuration > Duration.zero,
-      "With the given values, the total duration for one round would be "
+      'With the given values, the total duration for one round would be '
       "negative. As time travel isn't invented yet, this shouldn't happen.",
     );
     assert(
       _linearDuration! >= Duration.zero,
-      "Acceleration and deceleration phase overlap. To fix this, try a "
-      "combination of these approaches:\n"
+      'Acceleration and deceleration phase overlap. To fix this, try a '
+      'combination of these approaches:\n'
       "* Make the text longer, so there's more room to animate within.\n"
-      "* Shorten the accelerationDuration or decelerationDuration.\n"
-      "* Decrease the velocity, so the duration to animate within is longer.\n",
+      '* Shorten the accelerationDuration or decelerationDuration.\n'
+      '* Decrease the velocity, so the duration to animate within is longer.\n',
     );
   }
 
