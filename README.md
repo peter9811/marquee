@@ -2,7 +2,7 @@
 including custom scroll directions, durations, curves as well as pauses after
 every round.
 
-*Appreciate the widget? Show some ❤️ and star the repo to support the project.*
+_Appreciate the widget? Show some ❤️ and star the repo to support the project._
 
 ## Usage
 

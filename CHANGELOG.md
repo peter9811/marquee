@@ -86,10 +86,10 @@
 - Complete overhaul of the widget architecture. Now, no custom widget is
   accepted as a child, but only text. This is a limitation that was consciously
   made to allow several other features to be implemented, including:
-  * More efficient scrolling that resets after every round.
-  * Backwards scrolling.
-  * Pauses after every round.
-  * Custom durations and curves for accelerating and decelerating.
+  - More efficient scrolling that resets after every round.
+  - Backwards scrolling.
+  - Pauses after every round.
+  - Custom durations and curves for accelerating and decelerating.
 - Switched to async handling of scrolling instead of relying on Timer,
   resulting in a more consistent experience when resuming from a paused app
   state.
